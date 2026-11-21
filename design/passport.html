@@ -1,0 +1,102 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1024px;height:1024px;overflow:hidden;font-family:'Times New Roman',Georgia,serif}
+body{background:#1a2744}
+.spread{display:flex;width:1024px;height:1024px}
+.page{flex:1;height:1024px;position:relative;overflow:hidden}
+/* Left page — photo + details */
+.left{background:linear-gradient(135deg,#1e3264 0%,#162244 40%,#1e3264 100%)}
+/* Right page — visas */
+.right{background:linear-gradient(225deg,#1e3264 0%,#162244 40%,#1e3264 100%)}
+/* Gold foil border */
+.border{position:absolute;inset:18px;border:3px solid #c4a94d;border-radius:4px;pointer-events:none}
+.border-inner{position:absolute;inset:24px;border:1px solid #8b7530;border-radius:2px;pointer-events:none}
+/* Coat of arms */
+.emblem{position:absolute;top:40px;left:50%;transform:translateX(-50%);text-align:center}
+.emblem .circle{width:64px;height:64px;border-radius:50%;border:2px solid #c4a94d;margin:0 auto;display:flex;align-items:center;justify-content:center;background:rgba(196,169,77,.1)}
+.emblem .icon{fill:#c4a94d}
+.emblem h2{color:#c4a94d;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-top:8px;font-weight:400}
+.emblem h1{color:#fff;font-size:16px;letter-spacing:2px;margin-top:2px}
+/* Photo */
+.photo{position:absolute;top:190px;left:50%;transform:translateX(-50%);width:140px;height:170px;border:2px solid #c4a94d;background:linear-gradient(180deg,#2a3a5c 0%,#3a4a6c 50%,#2a3a5c 100%)}
+.photo .face{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.photo .head{width:60px;height:70px;border-radius:50% 50% 30% 30%;background:#d4b896;margin:0 auto}
+.photo .hair{width:66px;height:22px;border-radius:50%;background:#3a2a1a;margin:-68px auto 0}
+.photo .eyes{display:flex;justify-content:center;gap:14px;margin-top:8px}
+.photo .eye{width:8px;height:6px;border-radius:50%;background:#1a1a1a}
+.photo .mouth{width:12px;height:5px;border-bottom:2px solid #8a6a5a;margin:8px auto 0;border-radius:0 0 50% 50%}
+.photo .shirt{width:50px;height:30px;background:#2a3550;margin:8px auto 0;border-radius:2px}
+.photo .collar{width:30px;height:15px;background:#fff;margin:-25px auto 0;clip-path:polygon(0 0,50% 100%,100% 0)}
+/* Details */
+.details{position:absolute;top:390px;left:50%;transform:translateX(-50%);width:260px}
+.detail{display:flex;border-bottom:1px solid rgba(196,169,77,.3);padding:5px 0}
+.detail .label{color:#8b7530;font-size:7.5px;text-transform:uppercase;letter-spacing:1.5px;width:80px}
+.detail .value{color:#e0d8c0;font-size:10px;letter-spacing:.5px}
+/* Passport number */
+.pnum{position:absolute;top:165px;left:50%;transform:translateX(-50%);color:#c4a94d;font-size:9px;letter-spacing:4px}
+/* Watermark */
+.watermark{position:absolute;inset:30px;opacity:.04;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.watermark svg{width:300px;height:300px}
+/* Right page — visa stamps */
+.visas{padding:40px 28px}
+.visa-stamp{display:inline-block;border:2px solid #c4a94d;border-radius:50%;width:70px;height:70px;text-align:center;margin:8px 6px;position:relative;color:#c4a94d;font-size:6px;line-height:1.3;padding-top:14px}
+.visa-stamp .date{color:#8b7530;font-size:5.5px}
+.visa-stamp.entry{border-color:#6a9955;color:#6a9955}
+.visa-stamp .circle-inner{border:1px solid currentColor;border-radius:50%;position:absolute;inset:6px}
+/* Right page header */
+.rheader{color:#c4a94d;font-size:8px;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;text-align:center}
+/* Signature */
+.signature{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);text-align:center}
+.signature .line{width:180px;border-bottom:1px solid #c4a94d;margin:0 auto 4px}
+.signature .name{color:#c4a94d;font-size:8px;font-style:italic;letter-spacing:1px}
+/* Bottom text */
+.footer-text{position:absolute;bottom:32px;left:0;right:0;text-align:center;color:#8b7530;font-size:6.5px;letter-spacing:2px;text-transform:uppercase}
+/* Country name bottom */
+.cname{position:absolute;bottom:72px;left:0;right:0;text-align:center;color:#c4a94d;font-size:7px;letter-spacing:3px}
+/* Page number */
+.pno{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);color:#8b7530;font-size:6px}
+</style></head><body>
+<div class="spread">
+<div class="page left">
+<div class="border"></div><div class="border-inner"></div>
+<div class="emblem">
+<svg width="64" height="64" viewBox="0 0 64 64"><g class="icon"><circle cx="32" cy="32" r="28" fill="none" stroke="#c4a94d" stroke-width="1.5"/><path d="M16 36 Q24 20 32 24 Q40 28 48 20" fill="none" stroke="#c4a94d" stroke-width="1.2"/><path d="M20 44 L26 40 L30 44 L24 48Z" fill="none" stroke="#c4a94d" stroke-width="1"/><path d="M34 44 L40 40 L44 44 L38 48Z" fill="none" stroke="#c4a94d" stroke-width="1"/><circle cx="32" cy="34" r="4" fill="#c4a94d" opacity=".6"/><text x="32" y="58" text-anchor="middle" fill="#c4a94d" font-size="7">★★★</text></g></svg>
+<h2>Republic of</h2><h1>AURORIA</h1>
+</div>
+<div class="pnum">P<small style="letter-spacing:1px">&#9679;</small>AR7048291</div>
+<div class="photo">
+<div class="face"><div class="hair"></div><div class="head"></div><div class="eyes"><div class="eye"></div><div class="eye"></div></div><div class="mouth"></div><div class="collar"></div><div class="shirt"></div></div>
+</div>
+<div class="details">
+<div class="detail"><span class="label">Surname</span><span class="value">KOVACS</span></div>
+<div class="detail"><span class="label">Given names</span><span class="value">ELIN MARIA</span></div>
+<div class="detail"><span class="label">Nationality</span><span class="value">AURORIAN</span></div>
+<div class="detail"><span class="label">Date of birth</span><span class="value">12 MAR 2004</span></div>
+<div class="detail"><span class="label">Place of birth</span><span class="value">NIMBUS, AURORIA</span></div>
+<div class="detail"><span class="label">Authority</span><span class="value">MINISTRY OF SKY</span></div>
+<div class="detail"><span class="label">Profession</span><span class="value" style="color:#c4a94d;letter-spacing:1px">CLOUD-SEEDING PILOT</span></div>
+</div>
+<div class="signature"><div class="line"></div><div class="name">Elin M. Kovacs</div></div>
+<div class="cname">REPUBLIC OF AURORIA</div>
+<div class="pno">5</div>
+</div>
+
+<div class="page right">
+<div class="border"></div><div class="border-inner"></div>
+<div class="visas" style="padding-top:44px">
+<div class="rheader">VISAS &#9679; ENTRIES &#9679; PERMITS</div>
+<div class="visa-stamp">REPUBLIC<br>OF<br>TAZIRI<br><span class="date">14.06.26</span><div class="circle-inner"></div></div>
+<div class="visa-stamp entry">MERROW<br>TIDE-PASS<br><span class="date">02.03.26</span><div class="circle-inner"></div></div>
+<div class="visa-stamp">ALTVARRA<br>GUIDE<br><span class="date">19.01.26</span><div class="circle-inner"></div></div>
+<div class="visa-stamp entry">KESTRAVA<br>CAUSEWAY<br><span class="date">07.04.26</span><div class="circle-inner"></div></div>
+<div class="visa-stamp">ISENMERE<br>ICE-ROAD<br><span class="date">22.11.25</span><div class="circle-inner"></div></div>
+<div class="visa-stamp entry">HRAFNS EY<br>NORTHERN<br><span class="date">30.08.25</span><div class="circle-inner"></div></div>
+<div class="visa-stamp">VELMORA<br>DIPLOMA<br><span class="date">11.05.25</span><div class="circle-inner"></div></div>
+<div class="visa-stamp entry">ISVANE<br>TRADE<br><span class="date">03.12.24</span><div class="circle-inner"></div></div>
+</div>
+<div class="watermark"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="#c4a94d" stroke-width="4"/><text x="100" y="108" text-anchor="middle" fill="#c4a94d" font-size="28" font-weight="bold">AURORIA</text></svg></div>
+<div class="footer-text" style="bottom:28px">THE MINISTER OF SKY REQUESTS ALL WHOM IT MAY CONCERN TO ALLOW THE BEARER TO PASS FREELY</div>
+<div class="pno" style="bottom:16px">6</div>
+</div>
+</div>
+</body></html>

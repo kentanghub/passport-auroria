@@ -1,0 +1,1 @@
+import{copyFileSync,mkdirSync}from'node:fs';mkdirSync('/output',{recursive:true});copyFileSync(new URL('./passport.png',import.meta.url),'/output/entry.png');
